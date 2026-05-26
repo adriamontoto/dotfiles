@@ -12,6 +12,8 @@
   "telemetry.editStats.enabled": false,
 
   "extensions.ignoreRecommendations": true,
+  "extensions.autoUpdate": false,
+  "extensions.autoCheckUpdates": false,
 
   "security.workspace.trust.untrustedFiles": "open",
 
@@ -86,6 +88,7 @@
   "explorer.excludeGitIgnore": true,
   "explorer.confirmDragAndDrop": false,
   "explorer.compactFolders": false,
+  "explorer.confirmPasteNative": false,
   "explorer.fileNesting.patterns": {
     "*.ts": "${capture}.js",
     "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
@@ -100,8 +103,9 @@
     "*.sdb": "${capture}.${extname}-*",
     "*.s3db": "${capture}.${extname}-*"
   },
-
-  "workbench.colorTheme": "Atom One Dark",
+  "workbench.colorTheme": "OneDark",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.productIconTheme": "material-product-icons",
   "workbench.startupEditor": "none",
   "workbench.tree.enableStickyScroll": true,
   "workbench.editorLargeFileConfirmation": 6000,
@@ -109,8 +113,6 @@
   "workbench.list.horizontalScrolling": false,
   "workbench.tree.indent": 8,
   "workbench.layoutControl.enabled": false,
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.productIconTheme": "material-product-icons",
   "workbench.colorCustomizations": {
     "terminalCursor.foreground": "#DCDFE4",
     "terminalCursor.background": "#DCDFE4",
@@ -149,13 +151,6 @@
     "**/.claude": true
   },
 
-  "remote.SSH.showLoginTerminal": true,
-  "remote-explorer.foldersSortOrder": "alphabetical",
-  "remote.autoForwardPortsSource": "hybrid",
-
-  "path-intellisense.showHiddenFiles": true,
-  "path-intellisense.autoSlashAfterDirectory": true,
-
   "terminal.integrated.fontFamily": "Cascadia Code NF",
   "terminal.integrated.fontWeight": "400",
   "terminal.integrated.letterSpacing": 0,
@@ -180,13 +175,15 @@
   "git.confirmEmptyCommits": false,
   "git.alwaysSignOff": true,
   "git.confirmNoVerifyCommit": false,
+  "git.addAICoAuthor": "off",
 
   "github.gitProtocol": "ssh",
   "github.copilot.enable": {
     "*": true,
     "plaintext": true,
     "markdown": true,
-    "scminput": true
+    "scminput": true,
+    "dotenv": false
   },
   "github.copilot.nextEditSuggestions.enabled": true,
   "github.copilot.chat.codesearch.enabled": true,
@@ -209,6 +206,8 @@
   "gitlens.defaultDateFormat": "DD/MM/YYYY hh:mm",
   "gitlens.defaultTimeFormat": "hh:mm",
   "gitlens.defaultDateShortFormat": "DD/MM/YYYY",
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
   "gitlens.menus": {
     "editor": {
       "blame": false,
@@ -257,64 +256,7 @@
   "cSpell.language": "en,lorem",
   "cSpell.diagnosticLevel": "Hint",
 
-  "todohighlight.keywords": [
-    {
-      "text": "# TODO:",
-      "color": "rgba(222, 213, 142)",
-      "backgroundColor": "rgba(222, 213, 142, 0.1)",
-      "isWholeLine": true,
-      "overviewRulerColor": "rgba(222, 213, 142)"
-    },
-    {
-      "text": "# BUG:",
-      "color": "rgba(227, 104, 104)",
-      "backgroundColor": "rgba(227, 104, 104, 0.1)",
-      "isWholeLine": true,
-      "overviewRulerColor": "rgba(227, 104, 104)"
-    },
-    {
-      "text": "# ERROR:",
-      "color": "rgba(227, 104, 104)",
-      "backgroundColor": "rgba(227, 104, 104, 0.1)",
-      "isWholeLine": true,
-      "overviewRulerColor": "rgba(227, 104, 104)"
-    },
-    {
-      "text": "# FIX:",
-      "color": "rgba(213, 156, 217)",
-      "backgroundColor": "rgba(213, 156, 217, 0.1)",
-      "isWholeLine": true,
-      "overviewRulerColor": "rgba(213, 156, 217)"
-    },
-    {
-      "text": "# FIXME:",
-      "color": "rgba(213, 156, 217)",
-      "backgroundColor": "rgba(213, 156, 217, 0.1)",
-      "isWholeLine": true,
-      "overviewRulerColor": "rgba(213, 156, 217)"
-    },
-    {
-      "text": "# NOTE:",
-      "color": "rgba(152, 195, 121)",
-      "backgroundColor": "rgba(152, 195, 121, 0.1)",
-      "isWholeLine": true,
-      "overviewRulerColor": "rgba(152, 195, 121)"
-    }
-  ],
-
-  "todo-tree.tree.scanMode": "workspace only",
-  "todo-tree.general.showActivityBarBadge": true,
-  "todo-tree.general.showIconsInsteadOfTagsInStatusBar": true,
-  "todo-tree.highlights.enabled": false,
-  "todo-tree.tree.disableCompactFolders": true,
-  "todo-tree.tree.buttons.expand": false,
-  "todo-tree.tree.showCurrentScanMode": false,
-  "todo-tree.tree.hideTreeWhenEmpty": true,
-  "todo-tree.general.tags": ["TODO:", "BUG:", "ERROR:", "FIX:", "FIXME:"],
-  "todo-tree.filtering.excludeGlobs": ["**/node_modules/*/**", "**/*venv*/**"],
-
-  "js.updateImportsOnFileMove.enabled": "always",
-  "ts.updateImportsOnFileMove.enabled": "always",
+  "js/ts.updateImportsOnFileMove.enabled": "always",
 
   "python.analysis.typeCheckingMode": "strict",
   "python.languageServer": "Pylance",
@@ -331,8 +273,6 @@
   "python.testing.pytestEnabled": true,
   "python.testing.unittestArgs": [],
 
-  "pythonIndent.trimLinesWithOnlyWhitespace": true,
-  "pythonIndent.useTabOnHangingIndent": true,
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.codeActionsOnSave": {
@@ -342,26 +282,7 @@
     "diffEditor.ignoreTrimWhitespace": false
   },
 
-  "autoDocstring.startOnNewLine": true,
-
   "notebook.formatOnCellExecution": true,
-
-  "mypy-type-checker.args": [
-    "--warn-unreachable",
-    "--enable-error-code",
-    "redundant-expr",
-    "--enable-error-code",
-    "possibly-undefined",
-    "--enable-error-code",
-    "truthy-bool",
-    "--enable-error-code",
-    "explicit-override",
-    "--enable-incomplete-feature=Unpack"
-  ],
-  "mypy-type-checker.severity": {
-    "name-defined": "Warning"
-  },
-  "mypy-type-checker.reportingScope": "workspace",
 
   "redhat.telemetry.enabled": false,
   "yaml.format.singleQuote": true,
@@ -489,8 +410,6 @@
   "sqlfluff.linter.lintEntireProject": true,
   "sqlfluff.format.enabled": true,
   "sqlfluff.dialect": "postgres",
-
-  "dotenv.enableAutocloaking": false,
 
   "chat.editing.confirmEditRequestRemoval": false,
   "chat.commandCenter.enabled": false,

@@ -1,0 +1,23 @@
+{
+  "name": "materialicontheme",
+  "displayName": "Material Icon Theme",
+  "description": "Local frozen copy of Material Icon Theme. Static icon theme only.",
+  "version": "0.0.1",
+  "publisher": "adria",
+  "private": true,
+  "engines": {
+    "vscode": ">=1.90.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "iconThemes": [
+      {
+        "id": "material-icon-theme",
+        "label": "Material Icon Theme",
+        "path": "./dist/material_icons.json"
+      }
+    ]
+  }
+}

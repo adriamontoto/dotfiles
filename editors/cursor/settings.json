@@ -1,10 +1,13 @@
 {
   "window.commandCenter": false,
   "window.titleBarStyle": "custom",
+  "window.autoDetectColorScheme": false,
   "breadcrumbs.symbolPath": "off",
   "update.showReleaseNotes": false,
   "telemetry.feedback.enabled": false,
   "extensions.ignoreRecommendations": true,
+  "extensions.autoUpdate": false,
+  "extensions.autoCheckUpdates": false,
   "security.workspace.trust.untrustedFiles": "open",
   "debug.closeReadonlyTabsOnEnd": true,
   "editor.lineHeight": 1.7,
@@ -87,7 +90,9 @@
     "*.sdb": "${capture}.${extname}-*",
     "*.s3db": "${capture}.${extname}-*"
   },
-  "workbench.colorTheme": "Atom One Dark",
+  "workbench.colorTheme": "OneDark",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.productIconTheme": "material-product-icons",
   "workbench.startupEditor": "none",
   "workbench.tree.enableStickyScroll": true,
   "workbench.layoutControl.enabled": false,
@@ -95,8 +100,6 @@
   "workbench.list.smoothScrolling": true,
   "workbench.list.horizontalScrolling": false,
   "workbench.tree.indent": 8,
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.productIconTheme": "material-product-icons",
   "workbench.colorCustomizations": {
     "terminalCursor.foreground": "#DCDFE4",
     "terminalCursor.background": "#DCDFE4",
@@ -133,10 +136,6 @@
     "**/.idea": true,
     "**/.claude": true
   },
-  "remote.SSH.showLoginTerminal": true,
-  "remote.autoForwardPortsSource": "hybrid",
-  "path-intellisense.showHiddenFiles": true,
-  "path-intellisense.autoSlashAfterDirectory": true,
   "terminal.integrated.fontFamily": "Cascadia Code NF",
   "terminal.integrated.fontWeight": "400",
   "terminal.integrated.letterSpacing": 0,
@@ -216,67 +215,12 @@
   },
   "cSpell.language": "en,lorem",
   "cSpell.diagnosticLevel": "Hint",
-  "todohighlight.keywords": [
-    {
-      "text": "# TODO:",
-      "color": "rgba(222, 213, 142)",
-      "backgroundColor": "rgba(222, 213, 142, 0.1)",
-      "isWholeLine": true,
-      "overviewRulerColor": "rgba(222, 213, 142)"
-    },
-    {
-      "text": "# BUG:",
-      "color": "rgba(227, 104, 104)",
-      "backgroundColor": "rgba(227, 104, 104, 0.1)",
-      "isWholeLine": true,
-      "overviewRulerColor": "rgba(227, 104, 104)"
-    },
-    {
-      "text": "# ERROR:",
-      "color": "rgba(227, 104, 104)",
-      "backgroundColor": "rgba(227, 104, 104, 0.1)",
-      "isWholeLine": true,
-      "overviewRulerColor": "rgba(227, 104, 104)"
-    },
-    {
-      "text": "# FIX:",
-      "color": "rgba(213, 156, 217)",
-      "backgroundColor": "rgba(213, 156, 217, 0.1)",
-      "isWholeLine": true,
-      "overviewRulerColor": "rgba(213, 156, 217)"
-    },
-    {
-      "text": "# FIXME:",
-      "color": "rgba(213, 156, 217)",
-      "backgroundColor": "rgba(213, 156, 217, 0.1)",
-      "isWholeLine": true,
-      "overviewRulerColor": "rgba(213, 156, 217)"
-    },
-    {
-      "text": "# NOTE:",
-      "color": "rgba(152, 195, 121)",
-      "backgroundColor": "rgba(152, 195, 121, 0.1)",
-      "isWholeLine": true,
-      "overviewRulerColor": "rgba(152, 195, 121)"
-    }
-  ],
-  "todo-tree.tree.scanMode": "workspace only",
-  "todo-tree.general.showIconsInsteadOfTagsInStatusBar": true,
-  "todo-tree.highlights.enabled": false,
-  "todo-tree.tree.disableCompactFolders": true,
-  "todo-tree.tree.buttons.expand": false,
-  "todo-tree.tree.showCurrentScanMode": false,
-  "todo-tree.tree.hideTreeWhenEmpty": true,
-  "todo-tree.general.tags": ["TODO:", "BUG:", "ERROR:", "FIX:", "FIXME:"],
-  "todo-tree.filtering.excludeGlobs": ["**/node_modules/*/**", "**/*venv*/**"],
   "typescript.updateImportsOnFileMove.enabled": "always",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "python.languageServer": "Pylance",
   "python.globalModuleInstallation": true,
   "python.testing.pytestEnabled": true,
   "python.testing.unittestArgs": [],
-  "pythonIndent.trimLinesWithOnlyWhitespace": true,
-  "pythonIndent.useTabOnHangingIndent": true,
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.codeActionsOnSave": {
@@ -285,7 +229,6 @@
     },
     "diffEditor.ignoreTrimWhitespace": false
   },
-  "autoDocstring.startOnNewLine": true,
   "notebook.formatOnCellExecution": true,
   "redhat.telemetry.enabled": false,
   "yaml.format.singleQuote": true,
@@ -404,6 +347,5 @@
   "prettier.tabWidth": 2,
   "prettier.singleQuote": true,
   "prettier.semi": false,
-  "prettier.endOfLine": "auto",
-  "dotenv.enableAutocloaking": false
+  "prettier.endOfLine": "auto"
 }

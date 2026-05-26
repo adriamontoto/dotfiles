@@ -1,0 +1,23 @@
+{
+  "name": "materialproducticons",
+  "displayName": "Material Product Icons",
+  "description": "Local frozen copy of Material Product Icons. Static product icon theme only.",
+  "version": "0.0.1",
+  "publisher": "adria",
+  "private": true,
+  "engines": {
+    "vscode": ">=1.90.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "productIconThemes": [
+      {
+        "id": "material-product-icons",
+        "label": "Material Product Icons",
+        "path": "./theme/material_product_icon_theme.json"
+      }
+    ]
+  }
+}

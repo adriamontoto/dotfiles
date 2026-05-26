@@ -1,0 +1,23 @@
+{
+  "name": "onedark",
+  "displayName": "One Dark",
+  "description": "Local frozen copy of Atom One Dark theme. Static theme only.",
+  "version": "0.0.1",
+  "publisher": "adria",
+  "private": true,
+  "engines": {
+    "vscode": ">=1.90.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "OneDark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/OneDark.json"
+      }
+    ]
+  }
+}
