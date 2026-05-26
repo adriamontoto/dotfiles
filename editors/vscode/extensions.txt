@@ -4,8 +4,6 @@ eamodio.gitlens
 esbenp.prettier-vscode
 ms-python.debugpy
 ms-python.python
-ms-python.vscode-pylance
-openai.chatgpt
 redhat.vscode-yaml
 streetsidesoftware.code-spell-checker
 tamasfe.even-better-toml

@@ -1,4 +1,3 @@
-anysphere.cursorpyright
 astral-sh.ty
 charliermarsh.ruff
 eamodio.gitlens

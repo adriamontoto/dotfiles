@@ -259,7 +259,7 @@
   "js/ts.updateImportsOnFileMove.enabled": "always",
 
   "python.analysis.typeCheckingMode": "strict",
-  "python.languageServer": "Pylance",
+  "python.languageServer": "None",
   "python.globalModuleInstallation": true,
   "python.analysis.autoFormatStrings": true,
   "python.analysis.inlayHints.functionReturnTypes": true,

@@ -217,7 +217,7 @@
   "cSpell.diagnosticLevel": "Hint",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "python.languageServer": "Pylance",
+  "python.languageServer": "None",
   "python.globalModuleInstallation": true,
   "python.testing.pytestEnabled": true,
   "python.testing.unittestArgs": [],
